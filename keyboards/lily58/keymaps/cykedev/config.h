@@ -16,6 +16,21 @@
 #pragma once
 
 #define USE_SERIAL_PD2
-#define MASTER_LEFT
-#define TAPPING_TERM 200
-#define TAPPING_TERM_PER_KEY
+#define EE_HANDS
+
+#define BOOTMAGIC_LITE_ROW 0
+#define BOOTMAGIC_LITE_COLUMN 0
+
+#define BOOTMAGIC_LITE_ROW_RIGHT 0
+#define BOOTMAGIC_LITE_COLUMN_RIGHT 5
+
+// Configure the global tapping term (default: 200ms)
+#define TAPPING_TERM 220
+
+// Prevent normal rollover on alphas from accidentally triggering mods.
+#define IGNORE_MOD_TAP_INTERRUPT
+
+// Enable rapid switch from tap to hold, disables double tap hold auto-repeat.
+#define TAPPING_FORCE_HOLD
+
+#define FORCE_NKRO
