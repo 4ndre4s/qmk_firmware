@@ -194,6 +194,21 @@ layer_state_t layer_state_set_user(layer_state_t state) {
   return update_tri_layer_state(state, _LOWER, _RAISE, _ADJUST);
 }
 
+bool get_ignore_mod_tap_interrupt(uint16_t keycode, keyrecord_t *record) {
+  switch (keycode) {
+    case SPC_L:
+      return false;
+   case SPC_R:
+      return false;
+   case ENT_L:
+      return false;
+   case ENT_R:
+      return false;
+    default:
+      return true;
+  }
+}
+
 // Flexible macOS-friendly Grave Escape
 // https://docs.qmk.fm/#/feature_key_overrides?id=flexible-macos-friendly-grave-escape
 
