@@ -33,6 +33,8 @@
 
 #define SPC_L   LSFT_T(KC_SPC)
 #define SPC_R   RSFT_T(KC_SPC)
+#define ENT_L   LSFT_T(KC_ENT)
+#define ENT_R   RSFT_T(KC_ENT)
 
 #define UNDO    LGUI(KC_Z)
 #define REDO    LGUI(KC_Y)
@@ -69,7 +71,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
    * '-----------------------------------------/                                  \-----------------------------------------'
    *                                  / RAISE /---------------.    .---------------\ LOWER \
    *                                 /       / Space / Enter /      \ Enter \ Space \       \
-   *                                '-------/ Shift /       /        \       \ Shift \-------'
+   *                                '-------/ Shift / Shift /        \ Shift \ Shift \-------'
    *                                       /---------------/          \---------------\
    *                                      /   =   / Home  /            \  End  \   -   \
    *                                     /   +   /       /              \       \   _   \
@@ -79,7 +81,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
    KC_TAB , KC_Q   , KC_W   , KC_F   , KC_P   , KC_B   ,                                     KC_J   , KC_L   , KC_U   , KC_Y   , KC_SCLN, KC_BSLS,
    KC_DEL , KC_A   , CM_R   , CM_S   , CM_T   , KC_G   ,                                     KC_M   , CM_N   , CM_E   , CM_I   , KC_O   , KC_QUOT,
    KC_LSFT, KC_Z   , KC_X   , KC_C   , KC_D   , KC_V   ,                                     KC_K   , KC_H   , KC_COMM, KC_DOT , KC_SLSH, KC_RSFT,
-                                                RAISE  , SPC_L , KC_ENT  , KC_ENT , SPC_R  , LOWER  ,
+                                                RAISE  , SPC_L , ENT_L   , ENT_R  , SPC_R  , LOWER  ,
                                                          KC_EQL, KC_HOME , KC_END , KC_MINS
    ),
   [_QWERTY] = LAYOUT_split_4x6_5(
@@ -95,7 +97,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
    * '-----------------------------------------/                                  \-----------------------------------------'
    *                                  / RAISE /---------------.    .---------------\ LOWER \
    *                                 /       / Space / Enter /      \ Enter \ Space \       \
-   *                                '-------/ Shift /       /        \       \ Shift \-------'
+   *                                '-------/ Shift / Shift /        \ Shift \ Shift \-------'
    *                                       /---------------/          \---------------\
    *                                      /   =   / Home  /            \  End  \   -   \
    *                                     /   +   /       /              \       \   _   \
@@ -105,7 +107,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
    KC_TAB , KC_Q   , KC_W   , KC_E   , KC_R   , KC_T   ,                                     KC_Y   , KC_U   , KC_I   , KC_O   , KC_P   , KC_BSLS,
    KC_DEL , KC_A   , QU_S   , QU_D   , QU_F   , KC_G   ,                                     KC_H   , QU_J   , QU_K   , QU_L   , KC_SCLN, KC_QUOT,
    KC_LSFT, KC_Z   , KC_X   , KC_C   , KC_V   , KC_B   ,                                     KC_N   , KC_M   , KC_COMM, KC_DOT , KC_SLSH, KC_RSFT,
-                                                RAISE  , SPC_L , KC_ENT  , KC_ENT , SPC_R  , LOWER  ,
+                                                RAISE  , SPC_L , ENT_L   , ENT_R  , SPC_R  , LOWER  ,
                                                          KC_EQL, KC_HOME , KC_END , KC_MINS
    ),
    [_RAISE] = LAYOUT_split_4x6_5(
