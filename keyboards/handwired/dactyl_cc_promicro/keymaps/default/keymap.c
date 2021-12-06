@@ -48,7 +48,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
    *                             /       /       /       /              \       \       \       \
    *                            / Back- /  Del  /-------/                \-------\ Enter \ Space \
    *                           / Space /       / RAISE /                  \ LOWER \       \       \
-   *                          /       /       /       /                    \       \       \       \
+   *                          / |R-ALT/       /       /                    \       \       \       \
    *                         '-----------------------'                      '-----------------------'
    */
    KC_GESC, DE_1   , DE_2   , DE_3   , DE_4   , DE_5   ,                                     DE_6   , DE_7   , DE_8   , DE_9   , DE_0   , DE_SS  ,
@@ -58,7 +58,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
             DE_CIRC, DE_LABK, KC_LEFT, KC_RGHT,                                                       KC_UP  , KC_DOWN, DE_HASH, DE_PLUS,
                                                      KC_LCTL, KC_LALT,         KC_RALT, KC_RCTL,
                                                               KC_HOME,         KC_END ,
-                                            KC_BSPC, KC_DEL , RAISE  ,         LOWER  , KC_ENT , KC_SPC
+                                            RALT_T(KC_BSPC), KC_DEL , RAISE  ,         LOWER  , KC_ENT , KC_SPC
    ),
   [_RAISE] = LAYOUT_CC(
   /* RAISE
