@@ -32,7 +32,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   [_DVORAK] = LAYOUT_CC(
   /* DVORAK
    * .-----------------------------------------.                                  .-----------------------------------------.
-   * | Esc  |   1  |   2  |   3  |   4  |   5  |                                  |   6  |   7  |   8  |   9  |   0  |  ß   |
+   * | GEsc |   1  |   2  |   3  |   4  |   5  |                                  |   6  |   7  |   8  |   9  |   0  |  ß   |
    * |------+------+------+------+------+------|                                  |------+------+------+------+------+------|
    * | Tab  |   Ä  |   ,  |   .  |   P  |   Z  |                                  |   F  |   G  |   C  |   R  |   L  |  Ü   |
    * |------+------+------+------+------+------|                                  |------+------+------+------+------+------|
@@ -51,7 +51,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
    *                          /       /       /       /                    \       \       \       \
    *                         '-----------------------'                      '-----------------------'
    */
-   KC_ESC , DE_1   , DE_2   , DE_3   , DE_4   , DE_5   ,                                     DE_6   , DE_7   , DE_8   , DE_9   , DE_0   , DE_SS  ,
+   KC_GESC, DE_1   , DE_2   , DE_3   , DE_4   , DE_5   ,                                     DE_6   , DE_7   , DE_8   , DE_9   , DE_0   , DE_SS  ,
    KC_TAB , DE_ADIA, DE_COMM , DE_DOT, DE_P   , DE_Z   ,                                     DE_F   , DE_G   , DE_C   , DE_R   , DE_L   , DE_UDIA,
    KC_CAPS, DE_A   , DE_O   , DE_E   , DE_U   , DE_I   ,                                     DE_D   , DE_H   , DE_T   , DE_N   , DE_S   , DE_MINS,
    KC_LSFT, DE_ODIA, DE_Q   , DE_J   , DE_K   , DE_X   ,                                     DE_B   , DE_M   , DE_W   , DE_V   , DE_Y   , KC_RSFT,
