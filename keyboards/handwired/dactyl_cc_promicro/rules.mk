@@ -2,7 +2,7 @@
 MCU = atmega32u4
 
 # Bootloader selection
-BOOTLOADER = caterina
+BOOTLOADER = atmel-dfu
 
 # Build Options
 BOOTMAGIC_ENABLE = lite     # Enable Bootmagic Lite
@@ -17,4 +17,3 @@ BACKLIGHT_ENABLE = no       # Enable keyboard backlight functionality
 RGBLIGHT_ENABLE  = no        # Enable keyboard RGB underglow
 AUDIO_ENABLE     = no           # Audio output
 SPLIT_KEYBOARD   = yes
-
