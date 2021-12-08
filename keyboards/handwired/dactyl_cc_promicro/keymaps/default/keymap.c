@@ -28,6 +28,16 @@ enum layer_names {
   _MAC
 };
 
+enum {
+    TD_ESC_GRAVE,
+};
+
+// Tap Dance definitions
+qk_tap_dance_action_t tap_dance_actions[] = {
+    [TD_ESC_GRAVE] = ACTION_TAP_DANCE_DOUBLE(KC_ESC, DE_GRV)
+};
+
+
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   [_DVORAK] = LAYOUT_CC(
   /* DVORAK
@@ -51,14 +61,14 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
    *                          / |R-ALT/       /       /                    \       \       \       \
    *                         '-----------------------'                      '-----------------------'
    */
-   KC_GESC, DE_1   , DE_2   , DE_3   , DE_4   , DE_5   ,                                     DE_6   , DE_7   , DE_8   , DE_9   , DE_0   , DE_SS  ,
+   TD(TD_ESC_GRAVE), DE_1   , DE_2   , DE_3   , DE_4   , DE_5   ,                                     DE_6   , DE_7   , DE_8   , DE_9   , DE_0   , DE_SS  ,
    KC_TAB , DE_ADIA, DE_COMM , DE_DOT, DE_P   , DE_Z   ,                                     DE_F   , DE_G   , DE_C   , DE_R   , DE_L   , DE_UDIA,
    KC_CAPS, DE_A   , DE_O   , DE_E   , DE_U   , DE_I   ,                                     DE_D   , DE_H   , DE_T   , DE_N   , DE_S   , DE_MINS,
    KC_LSFT, DE_ODIA, DE_Q   , DE_J   , DE_K   , DE_X   ,                                     DE_B   , DE_M   , DE_W   , DE_V   , DE_Y   , KC_RSFT,
             DE_CIRC, DE_LABK, KC_LEFT, KC_RGHT,                                                       KC_UP  , KC_DOWN, DE_HASH, DE_PLUS,
                                                      KC_LCTL, KC_LALT,         KC_RALT, KC_RCTL,
                                                               KC_HOME,         KC_END ,
-                                            RALT_T(KC_BSPC), KC_DEL , RAISE  ,         LOWER  , KC_ENT , KC_SPC
+                                              KC_BSPC, KC_DEL , RAISE,         LOWER  , KC_ENT , KC_SPC
    ),
   [_RAISE] = LAYOUT_CC(
   /* RAISE
