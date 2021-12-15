@@ -60,7 +60,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
    *                             /       /       /       /              \       \       \       \
    *                            / Back- /  Del  /-------/                \-------\ Enter \ Space \
    *                           / Space /       / RAISE /                  \ LOWER \       \       \
-   *                          / |R-ALT/       /       /                    \       \       \       \
+   *                          /       /       /       /                    \       \       \       \
    *                         '-----------------------'                      '-----------------------'
    */
    TD(TD_ESC_GRAVE), DE_1   , DE_2   , DE_3   , DE_4   , DE_5   ,                                     DE_6   , DE_7   , DE_8   , DE_9   , DE_0   , DE_SS  ,
