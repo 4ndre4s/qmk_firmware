@@ -48,7 +48,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
    * |------+------+------+------+------+------|                                  |------+------+------+------+------+------|
    * | Tab  |   Ä  |   ,  |   .  |   P  |   Z  |                                  |   F  |   G  |   C  |   R  |   L  |  Ü   |
    * |------+------+------+------+------+------|                                  |------+------+------+------+------+------|
-   * | Caps |   A  |   O  |   E  |   U  |   I  |                                  |   D  |   H  |   T  |   N  |   S  |  -   |
+   * | TEXT |   A  |   O  |   E  |   U  |   I  |                                  |   D  |   H  |   T  |   N  |   S  |  -   |
    * |------+------+------+------+------+------|                                  |------+------+------+------+------+------|
    * | Shft |   Ö  |   Q  |   J  |   K  |   X  |                                  |   B  |   M  |   W  |   V  |   Y  | Shft |
    * '-----------------------------------------'                                  '-----------------------------------------'
@@ -65,7 +65,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
    */
    TD(TD_ESC_GRAVE), DE_1   , DE_2   , DE_3   , DE_4   , DE_5   ,                                     DE_6   , DE_7   , DE_8   , DE_9   , DE_0   , DE_SS  ,
    KC_TAB , DE_ADIA, DE_COMM , DE_DOT, DE_P   , DE_Z   ,                                     DE_F   , DE_G   , DE_C   , DE_R   , DE_L   , DE_UDIA,
-   KC_CAPS, DE_A   , DE_O   , DE_E   , DE_U   , DE_I   ,                                     DE_D   , DE_H   , DE_T   , DE_N   , DE_S   , DE_MINS,
+   TEXT, DE_A   , DE_O   , DE_E   , DE_U   , DE_I   ,                                     DE_D   , DE_H   , DE_T   , DE_N   , DE_S   , DE_MINS,
    KC_LSFT, DE_ODIA, DE_Q   , DE_J   , DE_K   , DE_X   ,                                     DE_B   , DE_M   , DE_W   , DE_V   , DE_Y   , KC_RSFT,
             DE_CIRC, DE_LABK, KC_LEFT, KC_RGHT,                                                       KC_UP  , KC_DOWN, DE_HASH, DE_PLUS,
                                                      KC_LCTL, KC_LALT,         KC_RALT, KC_RCTL,
