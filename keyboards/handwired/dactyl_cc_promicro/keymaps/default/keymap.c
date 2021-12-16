@@ -19,7 +19,8 @@
 #define RAISE   MO(_RAISE)
 #define LOWER   MO(_LOWER)
 #define MAC     TG(_MAC)
-#define TEXT    TG(_TEXT)
+#define TEXTMAC LM(_TEXT, MOD_LGUI)
+#define TEXTWIN LM(_TEXT, MOD_LCTL)
 
 enum layer_names {
   _DVORAK,
@@ -30,16 +31,6 @@ enum layer_names {
   _MAC
 };
 
-enum {
-    TD_ESC_GRAVE,
-};
-
-// Tap Dance definitions
-qk_tap_dance_action_t tap_dance_actions[] = {
-    [TD_ESC_GRAVE] = ACTION_TAP_DANCE_DOUBLE(KC_ESC, DE_GRV)
-};
-
-
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   [_DVORAK] = LAYOUT_CC(
   /* DVORAK
@@ -48,7 +39,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
    * |------+------+------+------+------+------|                                  |------+------+------+------+------+------|
    * | Tab  |   Ä  |   ,  |   .  |   P  |   Z  |                                  |   F  |   G  |   C  |   R  |   L  |  Ü   |
    * |------+------+------+------+------+------|                                  |------+------+------+------+------+------|
-   * | TEXT |   A  |   O  |   E  |   U  |   I  |                                  |   D  |   H  |   T  |   N  |   S  |  -   |
+   * | TEXTW|   A  |   O  |   E  |   U  |   I  |                                  |   D  |   H  |   T  |   N  |   S  |  -   |
    * |------+------+------+------+------+------|                                  |------+------+------+------+------+------|
    * | Shft |   Ö  |   Q  |   J  |   K  |   X  |                                  |   B  |   M  |   W  |   V  |   Y  | Shft |
    * '-----------------------------------------'                                  '-----------------------------------------'
@@ -63,9 +54,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
    *                          /       /       /       /                    \       \       \       \
    *                         '-----------------------'                      '-----------------------'
    */
-   TD(TD_ESC_GRAVE), DE_1   , DE_2   , DE_3   , DE_4   , DE_5   ,                                     DE_6   , DE_7   , DE_8   , DE_9   , DE_0   , DE_SS  ,
-   KC_TAB , DE_ADIA, DE_COMM , DE_DOT, DE_P   , DE_Z   ,                                     DE_F   , DE_G   , DE_C   , DE_R   , DE_L   , DE_UDIA,
-   TEXT, DE_A   , DE_O   , DE_E   , DE_U   , DE_I   ,                                     DE_D   , DE_H   , DE_T   , DE_N   , DE_S   , DE_MINS,
+   KC_ESC  , DE_1   , DE_2   , DE_3   , DE_4   , DE_5   ,                                     DE_6   , DE_7   , DE_8   , DE_9   , DE_0   , DE_SS  ,
+   KC_TAB , DE_ADIA, DE_COMM, DE_DOT , DE_P   , DE_Z   ,                                     DE_F   , DE_G   , DE_C   , DE_R   , DE_L   , DE_UDIA,
+   TEXTWIN, DE_A   , DE_O   , DE_E   , DE_U   , DE_I   ,                                     DE_D   , DE_H   , DE_T   , DE_N   , DE_S   , DE_MINS,
    KC_LSFT, DE_ODIA, DE_Q   , DE_J   , DE_K   , DE_X   ,                                     DE_B   , DE_M   , DE_W   , DE_V   , DE_Y   , KC_RSFT,
             DE_CIRC, DE_LABK, KC_LEFT, KC_RGHT,                                                       KC_UP  , KC_DOWN, DE_HASH, DE_PLUS,
                                                      KC_LCTL, KC_LALT,         KC_RALT, KC_RCTL,
@@ -141,7 +132,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     * |------+------+------+------+------+------|                                  |------+------+------+------+------+------|
     * |      |      |      |      |      |      |                                  |      |      |      |      |      |      |
     * |------+------+------+------+------+------|                                  |------+------+------+------+------+------|
-    * |      |      |      |      |      |      |                                  |      |      |      |      |      |      |
+    * |      |      |  Cut | Copy | Paste|      |                                  |      |      |      |      |      |      |
     * |------+------+------+------+------+------|                                  |------+------+------+------+------+------|
     * |      |      |      |      |      |      |                                  |      |      |      |      |      |      |
     * '-----------------------------------------'                                  '-----------------------------------------'
@@ -158,7 +149,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     */
     _______, _______, _______, _______, _______, _______,                                     _______, _______, _______, _______, _______, _______,
     _______, _______, _______, _______, _______, _______,                                     _______, _______, _______, _______, _______, _______,
-    _______, _______, _______, _______, _______, _______,                                     _______, _______, _______, _______, _______, _______,
+    _______, _______, DE_X   , DE_C   , DE_V   , _______,                                     _______, _______, _______, _______, _______, _______,
     _______, _______, _______, _______, _______, _______,                                     _______, _______, _______, _______, _______, _______,
              _______, _______, _______, _______,                                                       _______, _______, _______, _______,
                                                       _______, _______,         _______, _______,
@@ -203,7 +194,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
    * |------+------+------+------+------+------|                                  |------+------+------+------+------+------|
    * |      |      |      |      |      |      |                                  |      |      |      |      |      |      |
    * |------+------+------+------+------+------|                                  |------+------+------+------+------+------|
-   * |      |      |      |      |      |      |                                  |      |      |      |      |      |      |
+   * |TEXTM |      |      |      |      |      |                                  |      |      |      |      |      |      |
    * |------+------+------+------+------+------|                                  |------+------+------+------+------+------|
    * |      |      |      |      |      |      |                                  |      |      |      |      |      |      |
    * '-----------------------------------------'                                  '-----------------------------------------'
@@ -220,7 +211,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
    */
    _______, _______, _______, _______, _______, _______,                                     _______, _______, _______, _______, _______, _______,
    _______, _______, _______, _______, _______, _______,                                     _______, _______, _______, _______, _______, _______,
-   _______, _______, _______, _______, _______, _______,                                     _______, _______, _______, _______, _______, _______,
+   TEXTMAC, _______, _______, _______, _______, _______,                                     _______, _______, _______, _______, _______, _______,
    _______, _______, _______, _______, _______, _______,                                     _______, _______, _______, _______, _______, _______,
             _______, _______, _______, _______,                                                       _______, _______, _______, _______,
                                                      KC_LCMD, KC_LCTL,         KC_LOPT, KC_RCMD,
@@ -233,3 +224,14 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 layer_state_t layer_state_set_user(layer_state_t state) {
   return update_tri_layer_state(state, _LOWER, _RAISE, _ADJUST);
 }
+
+
+// Flexible macOS-friendly Grave Escape
+// https://docs.qmk.fm/#/feature_key_overrides?id=flexible-macos-friendly-grave-escape
+
+const key_override_t grave_esc_override = ko_make_basic(MOD_MASK_SHIFT, KC_ESC, DE_GRV);
+
+const key_override_t **key_overrides = (const key_override_t *[]){
+    &grave_esc_override,
+    NULL
+};

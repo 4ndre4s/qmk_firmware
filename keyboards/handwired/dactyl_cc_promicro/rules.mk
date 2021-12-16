@@ -18,4 +18,4 @@ RGBLIGHT_ENABLE  = no        # Enable keyboard RGB underglow
 AUDIO_ENABLE     = no           # Audio output
 SPLIT_KEYBOARD   = yes
 AUTO_SHIFT_ENABLE = no
-TAP_DANCE_ENABLE = yes
+KEY_OVERRIDE_ENABLE = yes
