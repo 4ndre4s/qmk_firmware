@@ -19,3 +19,4 @@ AUDIO_ENABLE     = no           # Audio output
 SPLIT_KEYBOARD   = yes
 AUTO_SHIFT_ENABLE = no
 KEY_OVERRIDE_ENABLE = yes
+AUTO_SHIFT_ENABLE = yes
